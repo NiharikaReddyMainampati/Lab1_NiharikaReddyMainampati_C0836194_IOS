@@ -13,9 +13,11 @@
 		1CC8BAF5248E151200B0969E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CC8BAF3248E151200B0969E /* Main.storyboard */; };
 		1CC8BAF7248E151500B0969E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CC8BAF6248E151500B0969E /* Assets.xcassets */; };
 		1CC8BAFA248E151500B0969E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CC8BAF8248E151500B0969E /* LaunchScreen.storyboard */; };
-		1CC8BB05248E156500B0969E /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CC8BB02248E156500B0969E /* cross.png */; };
 		1CC8BB06248E156500B0969E /* board.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CC8BB03248E156500B0969E /* board.png */; };
-		1CC8BB07248E156500B0969E /* nought.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CC8BB04248E156500B0969E /* nought.png */; };
+		C8E628EE27973C75008C747D /* p2.png in Resources */ = {isa = PBXBuildFile; fileRef = C8E628EC27973C75008C747D /* p2.png */; };
+		C8E628EF27973C75008C747D /* p1.png in Resources */ = {isa = PBXBuildFile; fileRef = C8E628ED27973C75008C747D /* p1.png */; };
+		C8E628F127976182008C747D /* cross1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C8E628F027976182008C747D /* cross1.jpeg */; };
+		C8E628F327976B60008C747D /* Nought1.png in Resources */ = {isa = PBXBuildFile; fileRef = C8E628F227976B60008C747D /* Nought1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,10 @@
 		1CC8BB02248E156500B0969E /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
 		1CC8BB03248E156500B0969E /* board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board.png; sourceTree = "<group>"; };
 		1CC8BB04248E156500B0969E /* nought.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nought.png; sourceTree = "<group>"; };
+		C8E628EC27973C75008C747D /* p2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p2.png; sourceTree = "<group>"; };
+		C8E628ED27973C75008C747D /* p1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p1.png; sourceTree = "<group>"; };
+		C8E628F027976182008C747D /* cross1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cross1.jpeg; sourceTree = "<group>"; };
+		C8E628F227976B60008C747D /* Nought1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nought1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +73,11 @@
 				1CC8BAEF248E151200B0969E /* SceneDelegate.swift */,
 				1CC8BAF1248E151200B0969E /* ViewController.swift */,
 				1CC8BAF3248E151200B0969E /* Main.storyboard */,
+				C8E628ED27973C75008C747D /* p1.png */,
+				C8E628EC27973C75008C747D /* p2.png */,
 				1CC8BAF6248E151500B0969E /* Assets.xcassets */,
+				C8E628F227976B60008C747D /* Nought1.png */,
+				C8E628F027976182008C747D /* cross1.jpeg */,
 				1CC8BAF8248E151500B0969E /* LaunchScreen.storyboard */,
 				1CC8BAFB248E151500B0969E /* Info.plist */,
 			);
@@ -111,7 +121,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1320;
 				ORGANIZATIONNAME = mohammadkiani;
 				TargetAttributes = {
 					1CC8BAE9248E151200B0969E = {
@@ -142,10 +152,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8E628EF27973C75008C747D /* p1.png in Resources */,
 				1CC8BAFA248E151500B0969E /* LaunchScreen.storyboard in Resources */,
+				C8E628F127976182008C747D /* cross1.jpeg in Resources */,
+				C8E628EE27973C75008C747D /* p2.png in Resources */,
+				C8E628F327976B60008C747D /* Nought1.png in Resources */,
 				1CC8BAF7248E151500B0969E /* Assets.xcassets in Resources */,
-				1CC8BB07248E156500B0969E /* nought.png in Resources */,
-				1CC8BB05248E156500B0969E /* cross.png in Resources */,
 				1CC8BB06248E156500B0969E /* board.png in Resources */,
 				1CC8BAF5248E151200B0969E /* Main.storyboard in Resources */,
 			);
@@ -212,6 +224,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -272,6 +285,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
