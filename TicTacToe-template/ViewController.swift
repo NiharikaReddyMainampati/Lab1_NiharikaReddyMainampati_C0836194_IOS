@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     var gamer = 1
     var gamePosition = [0,0,0,0,0,0,0,0,0]
+    var state = 0
     
     let winCombinations = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
     
@@ -27,6 +28,7 @@ class ViewController: UIViewController {
     
   
     @IBAction func playAction(_ sender: AnyObject) {
+        state = sender.tag
         if (gamePosition[sender.tag-1] == 0 && playIsActive == true) {
            gamePosition[sender.tag-1] = gamer
             
@@ -57,38 +59,46 @@ class ViewController: UIViewController {
                         person2Score.text = "Score: \(p2Score)"
                         
                     }
-                    if playIsActive == true {
-                        for i in gamePosition{
-                            gamer =  i * gamer
-                
-                        }
-                        if gamer != 0{
-                            winnerLbl.text = "Draw match"
-                        }
+                   
                        
                     }
             }
         }
-    }
+    //}
     
 
-    
-    
-    
-    
-    override func viewDidLoad() {
+      override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     
 
     let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(swipeUp))
     swipeUp.direction = UISwipeGestureRecognizer.Direction.up
-        view.addGestureRecognizer(swipeUp)
+        self.view.addGestureRecognizer(swipeUp)
+        becomeFirstResponder()
+
+        
 }
+    
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            print("shaked motion performed")
+            let button = view.viewWithTag(state) as! UIButton
+            button.setImage(nil, for: UIControl.State())
+            gamePosition[state-1] = 0
+            button.isEnabled = true
+            gamer-=1
+        }
+    }
+    
+    
     @objc func swipeUp(gesture: UISwipeGestureRecognizer){
-        let swipeGesture = gesture as UISwipeGestureRecognizer
-        switch swipeGesture.direction{
-        case UISwipeGestureRecognizer.Direction.up:
+       // let swipeGesture = gesture as UISwipeGestureRecognizer
             
             gamePosition = [0,0,0,0,0,0,0,0,0]
              playIsActive = true
@@ -99,13 +109,8 @@ class ViewController: UIViewController {
                     tap.setImage(nil, for: UIControl.State())
                     
                 }
-                default:
-                    print("Game is over")
-            
-        
-        
         }
     
     }
 
-}
+
